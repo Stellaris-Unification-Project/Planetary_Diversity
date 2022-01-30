@@ -23,10 +23,14 @@ decision_prospect = {
 		is_pd_unique = no
 		is_pd_hive_arcology = no
 		is_pd_robot_arcology = no
-		NOT = { is_planet_class = pc_machine }
-		NOT = { is_planet_class = pc_hive }
-		NOT = { is_planet_class = pc_pdhive1 }
-		NOT = { is_planet_class = pc_pdhive2 }
+		NOR = {
+			is_planet_class = pc_machine
+			is_planet_class = pc_hive
+		}
+		NOR = {
+			is_planet_class = pc_pdhive1
+			is_planet_class = pc_pdhive2
+		}
 		NOT = { is_planet_class = pc_city }
 		owner = {
 			has_active_tradition = tr_adaptability_finish

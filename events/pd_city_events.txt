@@ -21,8 +21,7 @@ ship_event = {
 			}
 			OR = {
 				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
+				is_fallen_empire = yes
 			}
 		}
 	}
@@ -81,8 +80,7 @@ ship_event = {
 			}
 			OR = {
 				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
+				is_fallen_empire = yes
 			}
 		}
 	}
@@ -152,7 +150,7 @@ planet_event = {
 		while = { 
 			count = 4
 			create_pop = {
-				species = last_created
+				species = last_created_species
 				}
 			}
 		owner = { country_event = { id = pdcity.31 } }
@@ -343,7 +341,7 @@ planet_event = {
 		}
 		create_army = {
 			name = "Sad Robots"
-			owner = last_created
+			owner = last_created_country
 			species = this
 			type = "machine_assault_1"
 		}
@@ -416,8 +414,7 @@ ship_event = {
 			}
 			OR = {
 				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
+				is_fallen_empire = yes
 			}
 		}
 	}
@@ -454,8 +451,7 @@ ship_event = {
 			}
 			OR = {
 				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
+				is_fallen_empire = yes
 			}
 		}
 	}

@@ -2794,11 +2794,11 @@ generate_pd_start_deposits_and_blockers = {
 		limit = {
 			is_planet_class = pc_nuked
 			owner = {	
-				or = {	
-				not = { has_origin = origin_post_apocalyptic }		
-				not = { has_civic = civic_machine_terminator }		
-				not = { has_civic = civic_machine_assimilator }		
-				not = { has_authority = auth_machine_intelligence }
+				NAND = {
+				has_origin = origin_post_apocalyptic		
+				has_civic = civic_machine_terminator		
+				has_civic = civic_machine_assimilator		
+				has_authority = auth_machine_intelligence
 				}
 			}
 		}

@@ -1338,7 +1338,7 @@ country_event = {
                 solar_system = { has_star_flag = sol }
 	            is_planet_class = pc_gas_giant     
 				planet_size = 20 
-				NOT = { has_moon = yes }
+				has_moon = no
 					}
 			set_planet_flag = pduranus
 			set_planet_entity = {
@@ -1596,7 +1596,7 @@ planet_event = {
 		remove_building = building_lanthanide_mine
 		}
 		if = { 
-		limit = { NOT = { OR = { is_planet_class = pc_megaflora is_planet_class = pc_megaflorahive is_planet_class = pc_megafloratol } } }
+		limit = { NOR = { is_planet_class = pc_megaflora is_planet_class = pc_megaflorahive is_planet_class = pc_megafloratol } }
 		remove_deposit = d_megaflora_deposit
 		remove_modifier = pdmegaflora
 		remove_building = building_megaflora_mine
@@ -1610,12 +1610,12 @@ planet_event = {
 		remove_modifier = ash
 		}
 		if = { 
-		limit = { NOT = { OR = { is_planet_class = pc_ash is_planet_class = pc_primal } } }
+		limit = { NOR = { is_planet_class = pc_ash is_planet_class = pc_primal } }
 		remove_deposit = d_lava_lakes
 		remove_building = building_lava_mine
 		}
 		if = { 
-		limit = { NOT = { OR = { is_planet_class = pc_aquatic is_planet_class = pc_tidallyaquatic } } }
+		limit = { NOR = { is_planet_class = pc_aquatic is_planet_class = pc_tidallyaquatic } }
 		remove_deposit = d_aquatic_trench
 		remove_modifier = aquatic
 		remove_building = building_undersea_gasmine
@@ -1689,24 +1689,18 @@ planet_event = {
 		}
 		if = { 
 		limit = { 
-			NOT = {
-				OR = {
+			NOR = {
 				is_planet_class = pc_machine 
-				is_planet_class = pc_machine_factory 
-				}
-			} 
+				is_planet_class = pc_machine_factory } 
 		}
 		remove_deposit = d_pd_machine_world_boost
 		}
 		if = { 
 			limit = { 
-				NOT = { 
-					OR = {
+				NOR = {
 						is_planet_class = pc_hothouse 
 						is_planet_class = pc_toxic 
-						is_planet_class = pc_gas_giant 
-					}
-				} 
+						is_planet_class = pc_gas_giant } 
 			}
 		remove_modifier = pdhabcalmwinds
 		}
@@ -1963,7 +1957,7 @@ planet_event = {
 		add_deposit = d_pd_machine_world_boost
 		}
 		if = {
-			limit = { NOT = { is_planet_class = pc_city } is_pd_arcology = no has_planet_flag = pdaquapicture NOT = { OR = { has_planet_flag = hotaquatic has_planet_flag = coldaquatic } } }
+			limit = { NOT = { is_planet_class = pc_city } is_pd_arcology = no has_planet_flag = pdaquapicture NOR = { has_planet_flag = hotaquatic has_planet_flag = coldaquatic } }
 			set_planet_entity = { picture = pc_aquatic }
 		}
 		if = {
@@ -2075,7 +2069,7 @@ planet_event = {
 
 	immediate = {
 			#Aquatics
-			IF = { limit = { is_planet_class = pc_aquatic NOT = { OR = { has_planet_flag = hotaquatic has_planet_flag = coldaquatic } } } set_planet_entity = { picture = pc_aquatic } set_planet_flag = pdaquapicture }
+			IF = { limit = { is_planet_class = pc_aquatic NOR = { has_planet_flag = hotaquatic has_planet_flag = coldaquatic } } set_planet_entity = { picture = pc_aquatic } set_planet_flag = pdaquapicture }
 			IF = { limit = { is_planet_class = pc_aquatic has_planet_flag = hotaquatic } set_planet_entity = { picture = pc_aquatichot_uw } set_planet_flag = pdaquapicture }
 			IF = { limit = { is_planet_class = pc_aquatic has_planet_flag = coldaquatic } set_planet_entity = { picture = pc_aquaticcold_uw } set_planet_flag = pdaquapicture }
 			IF = { limit = { is_planet_class = pc_tidallyaquatic } set_planet_entity = { picture = pc_aquatic } set_planet_flag = pdaquapicture }
@@ -2151,7 +2145,7 @@ planet_event = {
 	}
 
 	immediate = {
-		IF = { limit = { OR = { is_planet_class = pc_aquatic } NOT = { OR = { has_planet_flag = hotaquatic has_planet_flag = coldaquatic } } } set_planet_entity = { picture = pc_aquatichab } }
+		IF = { limit = { OR = { is_planet_class = pc_aquatic } NOR = { has_planet_flag = hotaquatic has_planet_flag = coldaquatic } } set_planet_entity = { picture = pc_aquatichab } }
 		IF = { limit = { is_planet_class = pc_aquatic has_planet_flag = hotaquatic } set_planet_entity = { picture = pc_aquatichothab } }
 		IF = { limit = { is_planet_class = pc_aquatic has_planet_flag = coldaquatic } set_planet_entity = { picture = pc_aquaticcoldhab } }
 		IF = { limit = { is_planet_class = pc_tidallyaquatic } set_planet_entity = { picture = pc_tidallyaquatichab } }
@@ -2182,20 +2176,34 @@ planet_event = {
 	immediate = {
 		if = {
 			limit = { 
-				NOT = { has_planet_flag = special_start_planet } 
-				NOT = { is_planet_class = pc_continental }
-				NOT = { is_planet_class = pc_tropical }
-				NOT = { is_planet_class = pc_tundra }
-				NOT = { is_planet_class = pc_arctic }
-				NOT = { is_planet_class = pc_arid }
-				NOT = { is_planet_class = pc_desert }
-				NOT = { is_planet_class = pc_ocean }
-				NOT = { is_planet_class = pc_alpine }
-				NOT = { is_planet_class = pc_savannah }
-				NOT = { is_planet_class = pc_gaia }
-				NOT = { is_planet_class = pc_relic }
-				NOT = { is_planet_class = pc_milarc_relic }
-				NOT = { is_planet_class = pc_archive }
+				NOR = {
+					has_planet_flag = special_start_planet
+					is_planet_class = pc_continental
+				}
+				NOR = {
+					is_planet_class = pc_tropical
+					is_planet_class = pc_tundra
+				}
+				NOR = {
+					is_planet_class = pc_arctic
+					is_planet_class = pc_arid
+				}
+				NOR = {
+					is_planet_class = pc_desert
+					is_planet_class = pc_ocean
+				}
+				NOR = {
+					is_planet_class = pc_alpine
+					is_planet_class = pc_savannah
+				}
+				NOR = {
+					is_planet_class = pc_gaia
+					is_planet_class = pc_relic
+				}
+				NOR = {
+					is_planet_class = pc_milarc_relic
+					is_planet_class = pc_archive
+				}
 			}
 			if = {
 				limit = {
@@ -2561,12 +2569,12 @@ planet_event = {
 		NOT = { is_planet_class = pc_hive }
 		#NOT = { is_planet_class = pc_pdhive1 }
 		#NOT = { is_planet_class = pc_pdhive2 }
-		NOT = { is_artificial = yes }
+		is_artificial = no
 	}
 
 	immediate = {
 		IF = {
-			limit = { not = { OR = { is_planet_class = pc_pdhive1 is_planet_class = pc_pdhive2 } } }
+			limit = { NOR = { is_planet_class = pc_pdhive1 is_planet_class = pc_pdhive2 } }
 			set_planet_flag = pd_infesting1	
 			add_modifier = { modifier = pd_infestingplanet days = 3600 }
 			planet_event = { id = pdengine.30 days = 3600 }
@@ -3031,10 +3039,12 @@ planet_event = {
 	immediate = {
 		IF = {
 			limit = { 
-				NOT = { has_planet_flag = pd_tol1 }
-				NOT = { has_planet_flag = pd_tol2 }
+				NOR = {
+					has_planet_flag = pd_tol1
+					has_planet_flag = pd_tol2
+				}
 				NOT = { has_planet_flag = pd_tol3 }
-				NOT = { is_artificial = yes }
+				is_artificial = no
 				NOT = { is_planet_class = pc_ecocity }
 				NOT = { is_planet_class = pc_corpoarc }
 				NOT = { is_planet_class = pc_palacearc }
@@ -3271,7 +3281,7 @@ planet_event = {
 		NOT = { has_planet_flag = pd_tol1 }
 		NOT = { has_planet_flag = pd_tol2 }
 		NOT = { has_planet_flag = pd_tol3 }
-		NOT = { is_artificial = yes }
+		is_artificial = no
 		NOT = { is_planet_class = pc_ecocity }
 		NOT = { is_planet_class = pc_corpoarc }
 		NOT = { is_planet_class = pc_palacearc }
@@ -3318,7 +3328,7 @@ planet_event = {
 	trigger = {
 		owner = { has_origin = origin_pd_tree_of_life }
 		has_planet_flag = pd_tol1
-		NOT = { is_artificial = yes }
+		is_artificial = no
 		NOT = { is_planet_class = pc_ecocity }
 		NOT = { is_planet_class = pc_corpoarc }
 		NOT = { is_planet_class = pc_palacearc }
@@ -3376,7 +3386,7 @@ planet_event = {
 	trigger = {
 		owner = { has_origin = origin_pd_tree_of_life }
 		has_planet_flag = pd_tol2
-		NOT = { is_artificial = yes }
+		is_artificial = no
 		NOT = { is_planet_class = pc_ecocity }
 		NOT = { is_planet_class = pc_corpoarc }
 		NOT = { is_planet_class = pc_palacearc }
@@ -3604,12 +3614,10 @@ country_event = {
 		every_galaxy_planet = { 
 			limit = { 
 				is_planet_class = pc_molten
-				not = { 
-					OR = {
+				NOR = {
 						has_modifier = terraforming_candidate 
 						is_moon = yes
-					}
-				}	
+}	
 				solar_system = { 
 					NOT = { has_star_flag = empire_home_system }
 					star = {
@@ -3652,12 +3660,10 @@ country_event = {
 		every_galaxy_planet = { 
 			limit = { 
 				is_planet_class = pc_molten
-				not = { 
-					OR = {
+				NOR = {
 						has_modifier = terraforming_candidate 
 						is_moon = yes
-					}
-				}	
+}	
 				solar_system = { 
 					NOT = { has_star_flag = empire_home_system }
 					star = {
@@ -3837,8 +3843,8 @@ country_event = {
 		every_galaxy_planet = { 
 			limit = { 
 				is_planet_class = pc_molten
-				NOT = { has_moon = yes }
-				NOT = { is_moon = yes }
+				has_moon = no
+				is_moon = no
 				solar_system = { 
 					NOT = { has_star_flag = empire_home_system }
 					star = {
@@ -3868,8 +3874,8 @@ country_event = {
 		every_galaxy_planet = { 
 			limit = { 
 				is_planet_class = pc_molten
-				NOT = { has_moon = yes }
-				NOT = { is_moon = yes }
+				has_moon = no
+				is_moon = no
 				solar_system = { 
 					NOT = { has_star_flag = empire_home_system }
 					star = {

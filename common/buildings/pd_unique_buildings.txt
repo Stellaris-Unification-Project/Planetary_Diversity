@@ -68,8 +68,10 @@ building_eludium_institute = {
 	category = research
 
 	potential = {
-		NOT = { has_modifier = resort_colony }
-		NOT = { has_modifier = slave_colony }
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
 		exists = owner
 		text = EMPIRE_UNIQUE_BUILDING
 		owner = {
@@ -205,8 +207,10 @@ building_eludium_floating_islands = {
 	category = amenity
 
 	potential = {
-		NOT = { has_modifier = resort_colony }
-		NOT = { has_modifier = slave_colony }
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
 		NOR = { 
 			is_planet_class = pc_floating
 			is_planet_class = pc_crystal
@@ -325,8 +329,10 @@ building_tiyanki_research_centre = {
 	category = research
 
 	potential = {
-		NOT = { has_modifier = resort_colony }
-		NOT = { has_modifier = slave_colony }
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
 		exists = owner
 		text = EMPIRE_UNIQUE_BUILDING
 		owner = {
@@ -451,8 +457,10 @@ building_tiyanki_parts_market = {
 	category = trade
 
 	potential = {
-		NOT = { has_modifier = resort_colony }
-		NOT = { has_modifier = slave_colony }
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
 	}
 
 	allow = {
@@ -531,8 +539,10 @@ building_tiyanki_power_plant = {
 	category = trade
 
 	potential = {
-		NOT = { has_modifier = resort_colony }
-		NOT = { has_modifier = slave_colony }
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
 	}
 
 	allow = {
@@ -615,8 +625,10 @@ building_tiyanki_observation_headquarters = {
 	category = research
 
 	potential = {
-		NOT = { has_modifier = resort_colony }
-		NOT = { has_modifier = slave_colony }
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
 		exists = owner
 		text = EMPIRE_UNIQUE_BUILDING
 		owner = {
@@ -656,7 +668,7 @@ building_tiyanki_observation_headquarters = {
 		potential = {
 			exists = owner
 			owner = { is_regular_empire = yes }
-			owner = { NOT = { is_spiritualist = yes } }
+			owner = { is_spiritualist = no }
 		}
 		planet_jobs_society_research_produces_mult = 0.25
 		planet_jobs_unity_produces_mult = 0.25
@@ -755,8 +767,10 @@ building_tiyanki_observation_lab = {
 	category = trade
 
 	potential = {
-		NOT = { has_modifier = resort_colony }
-		NOT = { has_modifier = slave_colony }
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
 		NOT = { is_planet_class = pc_graveyard }
 	}
 
@@ -778,7 +792,7 @@ building_tiyanki_observation_lab = {
 		potential = {
 			exists = owner
 			owner = { is_regular_empire = yes }
-			owner = { NOT = { is_spiritualist = yes } }
+			owner = { is_spiritualist = no }
 		}
 		planet_jobs_society_research_produces_mult = 0.1
 		planet_jobs_unity_produces_mult = 0.1
@@ -940,8 +954,10 @@ building_acean_farm = {
 	category = trade
 
 	potential = {
-		NOT = { has_modifier = resort_colony }
-		NOT = { has_modifier = slave_colony }
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
 		NOT = { is_planet_class = pc_crystal }
 	}
 
@@ -1032,8 +1048,10 @@ building_acean_patch = {
 	category = trade
 
 	potential = {
-		NOT = { has_modifier = resort_colony }
-		NOT = { has_modifier = slave_colony }
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
 		NOT = { is_planet_class = pc_crystal }
 	}
 

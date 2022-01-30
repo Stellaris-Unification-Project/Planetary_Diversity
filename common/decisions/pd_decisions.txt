@@ -28,16 +28,26 @@ decision_engineered_environment = {
 		is_pd_hive_arcology = no
 		is_pd_robot_arcology = no
 		is_pd_rare = no
-		NOT = { is_planet_class = pc_pdshroud }
-		NOT = { is_planet_class = pc_gaia }
-		NOT = { is_planet_class = pc_relic }
-		NOT = { is_planet_class = pc_milarc_relic }
-		NOT = { is_planet_class = pc_hive }
-		NOT = { is_planet_class = pc_pdhive1 }
-		NOT = { is_planet_class = pc_pdhive2 }
-		NOT = { is_planet_class = pc_machine }
-		NOT = { is_planet_class = pc_hive }
-		NOT = { has_modifier = engineered_environment }
+		NOR = {
+			is_planet_class = pc_pdshroud
+			is_planet_class = pc_gaia
+		}
+		NOR = {
+			is_planet_class = pc_relic
+			is_planet_class = pc_milarc_relic
+		}
+		NOR = {
+			is_planet_class = pc_hive
+			is_planet_class = pc_pdhive1
+		}
+		NOR = {
+			is_planet_class = pc_pdhive2
+			is_planet_class = pc_machine
+		}
+		NOR = {
+			is_planet_class = pc_hive
+			has_modifier = engineered_environment
+		}
 		NOT = { has_modifier = engineered_environment_gaia }
 	}
 
@@ -149,48 +159,90 @@ decision_engineered_environment_gaia = {
 	potential = {
 		is_artificial = no
 		is_pd_arcology = no
-		NOT = { is_planet_class = pc_pdshroud }
-		NOT = { is_planet_class = pc_gaia }
-		NOT = { is_planet_class = pc_city }
-		NOT = { is_planet_class = pc_ecocity }
-		NOT = { is_planet_class = pc_corpoarc }
-		NOT = { is_planet_class = pc_palacearc }
-		NOT = { is_planet_class = pc_capitalarc }
-		NOT = { is_planet_class = pc_necropolis }
-		NOT = { is_planet_class = pc_machine_necropolis }
-		NOT = { is_planet_class = pc_necrohive }
-		NOT = { is_planet_class = pc_relic }
-		NOT = { is_planet_class = pc_milarc_relic }
-		NOT = { is_planet_class = pc_crystal }
-		NOT = { is_planet_class = pc_graveyard }
-		NOT = { is_planet_class = pc_floating }
-		NOT = { is_planet_class = pc_archive }
-		NOT = { is_planet_class = pc_technoorganic }
-		NOT = { is_planet_class = pc_pd_gas_giant_hab }
-		NOT = { is_planet_class = pc_pd_barren_hab }
-		NOT = { is_planet_class = pc_pd_barren_cold_hab }
-		NOT = { is_planet_class = pc_pd_frozen_hab }
-		NOT = { is_planet_class = pc_pd_molten_hab }
-		NOT = { is_planet_class = pc_pd_toxic_hab }
-		NOT = { is_planet_class = pc_pd_hothouse_hab }
-		NOT = { is_planet_class = pc_pd_asteroid_hab }
-		NOT = { is_planet_class = pc_hive }
-		NOT = { is_planet_class = pc_pdhive1 }
-		NOT = { is_planet_class = pc_pdhive2 }
-		NOT = { is_planet_class = pc_bioforge }
-		NOT = { is_planet_class = pc_biocapital }
-		NOT = { is_planet_class = pc_megafloraforge }
-		NOT = { is_planet_class = pc_megafloracapital }
-		NOT = { is_planet_class = pc_milarc }
-		NOT = { is_planet_class = pc_biofort }
-		NOT = { is_planet_class = pc_megaflorafort }
-		NOT = { is_planet_class = pc_machine_fort }
-		NOT = { is_planet_class = pc_shroudcity }
-		NOT = { is_planet_class = pc_shroudecocity }
-		NOT = { is_planet_class = pc_shroudcapitalarc }
-		NOT = { is_planet_class = pc_shroudpalacearc }
-		NOT = { is_planet_class = pc_shroudmilarc }
-		NOT = { is_planet_class = pc_shroudcorpoarc }
+		NOR = {
+			is_planet_class = pc_pdshroud
+			is_planet_class = pc_gaia
+		}
+		NOR = {
+			is_planet_class = pc_city
+			is_planet_class = pc_ecocity
+		}
+		NOR = {
+			is_planet_class = pc_corpoarc
+			is_planet_class = pc_palacearc
+		}
+		NOR = {
+			is_planet_class = pc_capitalarc
+			is_planet_class = pc_necropolis
+		}
+		NOR = {
+			is_planet_class = pc_machine_necropolis
+			is_planet_class = pc_necrohive
+		}
+		NOR = {
+			is_planet_class = pc_relic
+			is_planet_class = pc_milarc_relic
+		}
+		NOR = {
+			is_planet_class = pc_crystal
+			is_planet_class = pc_graveyard
+		}
+		NOR = {
+			is_planet_class = pc_floating
+			is_planet_class = pc_archive
+		}
+		NOR = {
+			is_planet_class = pc_technoorganic
+			is_planet_class = pc_pd_gas_giant_hab
+		}
+		NOR = {
+			is_planet_class = pc_pd_barren_hab
+			is_planet_class = pc_pd_barren_cold_hab
+		}
+		NOR = {
+			is_planet_class = pc_pd_frozen_hab
+			is_planet_class = pc_pd_molten_hab
+		}
+		NOR = {
+			is_planet_class = pc_pd_toxic_hab
+			is_planet_class = pc_pd_hothouse_hab
+		}
+		NOR = {
+			is_planet_class = pc_pd_asteroid_hab
+			is_planet_class = pc_hive
+		}
+		NOR = {
+			is_planet_class = pc_pdhive1
+			is_planet_class = pc_pdhive2
+		}
+		NOR = {
+			is_planet_class = pc_bioforge
+			is_planet_class = pc_biocapital
+		}
+		NOR = {
+			is_planet_class = pc_megafloraforge
+			is_planet_class = pc_megafloracapital
+		}
+		NOR = {
+			is_planet_class = pc_milarc
+			is_planet_class = pc_biofort
+		}
+		NOR = {
+			is_planet_class = pc_megaflorafort
+			is_planet_class = pc_machine_fort
+		}
+		NOR = {
+			is_planet_class = pc_shroudcity
+			is_planet_class = pc_shroudecocity
+		}
+		NOR = {
+			is_planet_class = pc_shroudcapitalarc
+			is_planet_class = pc_shroudpalacearc
+		}
+		NOR = {
+			is_planet_class = pc_shroudmilarc
+			is_planet_class = pc_shroudcorpoarc
+		}
 		has_modifier = engineered_environment
 		owner = { has_ascension_perk = ap_world_shaper }
 	}
@@ -380,7 +432,7 @@ decision_oceancapital = {
 		NOT = { is_planet_class = pc_shroudmilarc }
 		NOT = { is_planet_class = pc_shroudcorpoarc }
 		NOT = { is_planet_class = pc_milarc }
-		NOT = { is_dry = yes }
+		is_dry = no
 		is_artificial = no
 	}
 
@@ -472,32 +524,58 @@ decision_techno_canal = {
 	}
 	
 	potential = {
-		NOT = { has_planet_flag = pdtechnocanal }
-		NOT = { is_planet_class = pc_city }
-		NOT = { is_planet_class = pc_ecocity }
-		NOT = { is_planet_class = pc_corpoarc }
-		NOT = { is_planet_class = pc_palacearc }
-		NOT = { is_planet_class = pc_capitalarc }
-		NOT = { is_planet_class = pc_necropolis }
-		NOT = { is_planet_class = pc_machine_necropolis }
-		NOT = { is_planet_class = pc_necrohive }
-		NOT = { is_planet_class = pc_milarc }
-		NOT = { is_planet_class = pc_shroudcity }
-		NOT = { is_planet_class = pc_shroudecocity }
-		NOT = { is_planet_class = pc_shroudcapitalarc }
-		NOT = { is_planet_class = pc_shroudpalacearc }
-		NOT = { is_planet_class = pc_shroudmilarc }
-		NOT = { is_planet_class = pc_shroudcorpoarc }
-		NOT = { is_planet_class = pc_hive }
-		NOT = { is_planet_class = pc_bioforge }
-		NOT = { is_planet_class = pc_biocapital }
-		NOT = { is_planet_class = pc_machine }
-		NOT = { is_planet_class = pc_machine_factory }
-		NOT = { is_planet_class = pc_machine_capital }
-		NOT = { is_planet_class = pc_machine_fort }
-		NOT = { has_modifier = resort_colony }
-		NOT = { has_modifier = penal_colony }
-		NOT = { has_modifier = slave_colony }
+		NOR = {
+			has_planet_flag = pdtechnocanal
+			is_planet_class = pc_city
+		}
+		NOR = {
+			is_planet_class = pc_ecocity
+			is_planet_class = pc_corpoarc
+		}
+		NOR = {
+			is_planet_class = pc_palacearc
+			is_planet_class = pc_capitalarc
+		}
+		NOR = {
+			is_planet_class = pc_necropolis
+			is_planet_class = pc_machine_necropolis
+		}
+		NOR = {
+			is_planet_class = pc_necrohive
+			is_planet_class = pc_milarc
+		}
+		NOR = {
+			is_planet_class = pc_shroudcity
+			is_planet_class = pc_shroudecocity
+		}
+		NOR = {
+			is_planet_class = pc_shroudcapitalarc
+			is_planet_class = pc_shroudpalacearc
+		}
+		NOR = {
+			is_planet_class = pc_shroudmilarc
+			is_planet_class = pc_shroudcorpoarc
+		}
+		NOR = {
+			is_planet_class = pc_hive
+			is_planet_class = pc_bioforge
+		}
+		NOR = {
+			is_planet_class = pc_biocapital
+			is_planet_class = pc_machine
+		}
+		NOR = {
+			is_planet_class = pc_machine_factory
+			is_planet_class = pc_machine_capital
+		}
+		NOR = {
+			is_planet_class = pc_machine_fort
+			has_modifier = resort_colony
+		}
+		NOR = {
+			has_modifier = penal_colony
+			has_modifier = slave_colony
+		}
 		is_artificial = no
 		is_pd_unique = no
 	}
@@ -553,13 +631,11 @@ decision_pd_transplant_tree = {
 
 	potential = {
 		has_modifier = no_pd_lifetree
-		NOT = {
-			OR = {
+		NOR = {
 				has_deposit = d_pd_tree_of_life_habitat
 				has_deposit = d_pd_tree_of_life_ringworld
 				has_deposit = d_pd_tree_of_life_special
-			}
-		}
+}
 	}
 
 	allow = { }
@@ -571,10 +647,12 @@ decision_pd_transplant_tree = {
 		IF = {
 			limit = { 
 				is_pd_unique = no
-				NOT = { has_planet_flag = pd_tol1 }
-				NOT = { has_planet_flag = pd_tol2 }
+				NOR = {
+					has_planet_flag = pd_tol1
+					has_planet_flag = pd_tol2
+				}
 				NOT = { has_planet_flag = pd_tol3 }
-				NOT = { is_artificial = yes }
+				is_artificial = no
 				NOT = { is_planet_class = pc_ecocity }
 				NOT = { is_planet_class = pc_corpoarc }
 				NOT = { is_planet_class = pc_palacearc }
@@ -672,8 +750,7 @@ decision_ammoniahabsnocolony = {
 	potential = {
 		has_owner = no
 		OR = {
-		is_planet_class = pc_habitat
-		is_planet_class = pc_ringworld_habitable
+		is_artificial = yes
 		is_planet_class = pc_relic
 		is_planet_class = pc_milarc_relic
 		is_planet_class = pc_habitat 
@@ -763,8 +840,7 @@ decision_ammoniahabs = {
 
 	potential = {
 		OR = {
-		is_planet_class = pc_habitat
-		is_planet_class = pc_ringworld_habitable
+		is_artificial = yes
 		is_planet_class = pc_relic
 		is_planet_class = pc_milarc_relic
 		is_planet_class = pc_pd_barren_hab
@@ -854,8 +930,7 @@ decision_sulfurhabsnocolony = {
 	potential = {
 		has_owner = no
 		OR = {
-		is_planet_class = pc_habitat
-		is_planet_class = pc_ringworld_habitable
+		is_artificial = yes
 		is_planet_class = pc_relic
 		is_planet_class = pc_milarc_relic
 		is_planet_class = pc_habitat 
@@ -945,8 +1020,7 @@ decision_sulfurhabs = {
 
 	potential = {
 		OR = {
-		is_planet_class = pc_habitat
-		is_planet_class = pc_ringworld_habitable
+		is_artificial = yes
 		is_planet_class = pc_relic
 		is_planet_class = pc_milarc_relic
 		is_planet_class = pc_pd_barren_hab
@@ -1036,8 +1110,7 @@ decision_methanehabsnocolony = {
 	potential = {
 		has_owner = no
 		OR = {
-		is_planet_class = pc_habitat
-		is_planet_class = pc_ringworld_habitable
+		is_artificial = yes
 		is_planet_class = pc_relic
 		is_planet_class = pc_milarc_relic
 		is_planet_class = pc_pd_barren_hab
@@ -1126,8 +1199,7 @@ decision_methanehabs = {
 
 	potential = {
 		OR = {
-		is_planet_class = pc_habitat
-		is_planet_class = pc_ringworld_habitable
+		is_artificial = yes
 		is_planet_class = pc_relic
 		is_planet_class = pc_milarc_relic
 		is_planet_class = pc_pd_barren_hab
@@ -1217,8 +1289,7 @@ decision_ashhabsnocolony = {
 	potential = {
 		has_owner = no
 		OR = {
-		is_planet_class = pc_habitat
-		is_planet_class = pc_ringworld_habitable
+		is_artificial = yes
 		is_planet_class = pc_relic
 		is_planet_class = pc_milarc_relic
 		is_planet_class = pc_pd_barren_hab
@@ -1307,8 +1378,7 @@ decision_ashhabs = {
 
 	potential = {
 		OR = {
-		is_planet_class = pc_habitat
-		is_planet_class = pc_ringworld_habitable
+		is_artificial = yes
 		is_planet_class = pc_relic
 		is_planet_class = pc_milarc_relic
 		is_planet_class = pc_pd_barren_hab
@@ -1398,8 +1468,7 @@ decision_noexoitchabsnocolony = {
 	potential = {
 		has_owner = no
 		OR = {
-		is_planet_class = pc_habitat
-		is_planet_class = pc_ringworld_habitable
+		is_artificial = yes
 		is_planet_class = pc_relic
 		is_planet_class = pc_milarc_relic
 		is_planet_class = pc_pd_barren_hab
@@ -1431,14 +1500,12 @@ decision_noexoitchabsnocolony = {
 		has_modifier = pdsulfuratmosphere
 		}
 		from = { 
-			NOT = { 
-				OR = {
+			NOR = {
 					has_trait = trait_pc_ash_preference
 					has_trait = trait_pc_methane_preference
 					has_trait = trait_pc_ammonia_preference
 					has_trait = trait_pc_sulfur_preference
-				}
-			}
+}
 		}
 	}
 
@@ -1541,8 +1608,7 @@ decision_noexoitchabs = {
 
 	potential = {
 		OR = {
-		is_planet_class = pc_habitat
-		is_planet_class = pc_ringworld_habitable
+		is_artificial = yes
 		is_planet_class = pc_relic
 		is_planet_class = pc_milarc_relic
 		is_planet_class = pc_city
@@ -1575,14 +1641,12 @@ decision_noexoitchabs = {
 		}
 		owner = { 
 			any_owned_pop = {
-				NOT = { 
-					OR = {
+				NOR = {
 						has_trait = trait_pc_ash_preference
 						has_trait = trait_pc_methane_preference
 						has_trait = trait_pc_ammonia_preference
 						has_trait = trait_pc_sulfur_preference
-					}
-				}
+}
 			}
 		}
 	}

@@ -21,8 +21,7 @@ ship_event = {
 			}
 			OR = {
 				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
+				is_fallen_empire = yes
             }
 			NOT = { has_authority = auth_machine_intelligence }
 		}
@@ -60,8 +59,7 @@ ship_event = {
 			}
 			OR = {
 				is_country_type = default
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
+				is_fallen_empire = yes
 			}
 		}
 	}
@@ -131,8 +129,7 @@ planet_event = {
 			trigger = {
 				owner = { 
 					OR = { 
-						has_ethic = ethic_materialist
-						has_ethic = ethic_fanatic_materialist
+						is_materialist = yes
 					}
 				}
 			}
@@ -151,8 +148,7 @@ planet_event = {
 			trigger = {
 				owner = {
 					OR = { 
-						has_ethic = ethic_spiritualist
-						has_ethic = ethic_fanatic_spiritualist
+						is_spiritualist = yes
 					}
 				}
 			}
@@ -302,8 +298,7 @@ planet_event = {
 		trigger = {
 			owner = { 
 			OR = { 
-				has_ethic = ethic_militarist
-				has_ethic = ethic_fanatic_militarist
+				is_militarist = yes
 				}
 			}
 		}	
@@ -318,8 +313,7 @@ planet_event = {
 		trigger = {
 			owner = { 
 			OR = { 
-				has_ethic = ethic_pacifist 
-				has_ethic = ethic_fanatic_pacifist 
+				is_pacifist = yes 
 				}
 			}
 		}
@@ -334,8 +328,7 @@ planet_event = {
 		trigger = {
 			owner = { 
 			OR = { 
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
+				is_materialist = yes
 				}
 			}
 		}
@@ -350,8 +343,7 @@ planet_event = {
 		trigger = {
 			owner = { 
 			OR = { 
-				has_ethic = ethic_spiritualist
-				has_ethic = ethic_fanatic_spiritualist
+				is_spiritualist = yes
 				}
 			}
 		}
@@ -506,8 +498,10 @@ country_event = {
 			give_technology = { tech = tech_fourschildren }
 			if = {
 				limit = { 
-					NOT = { has_technology = tech_sapient_ai }
-					NOT = { is_gestalt = YES }
+					NOR = {
+						has_technology = tech_sapient_ai
+						is_gestalt = YES
+					}
 				}
 				give_technology = { tech = tech_sapient_ai }
 			} 

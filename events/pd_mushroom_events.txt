@@ -552,20 +552,20 @@ planet_event = {
 		}
 		create_army = {
 			name = "NAME_Mushroom_Monsters"
-			owner = last_created
-			species = last_created
+			owner = last_created_country
+			species = last_created_species
 			type = "mutant_army"
 		}
 		create_army = {
 			name = "NAME_Mushroom_Monsters"
-			owner = last_created
-			species = last_created
+			owner = last_created_country
+			species = last_created_species
 			type = "mutant_army"
 		}
 		create_army = {
 			name = "NAME_Mushroom_Monsters"
-			owner = last_created
-			species = last_created
+			owner = last_created_country
+			species = last_created_species
 			type = "mutant_army"
 		}
 	}
@@ -684,7 +684,7 @@ country_event = {
 			while = { 
 				count = 3
 				create_pop = {
-					species = last_created
+					species = last_created_species
 					}
 				}
 			}
