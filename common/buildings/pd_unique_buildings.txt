@@ -210,8 +210,6 @@ building_eludium_floating_islands = {
 		NOR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-		}
-		NOR = { 
 			is_planet_class = pc_floating
 			is_planet_class = pc_crystal
 			is_planet_class = pc_graveyard
@@ -770,8 +768,8 @@ building_tiyanki_observation_lab = {
 		NOR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
+			is_planet_class = pc_graveyard
 		}
-		NOT = { is_planet_class = pc_graveyard }
 	}
 
 	allow = {
@@ -957,8 +955,8 @@ building_acean_farm = {
 		NOR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
+			is_planet_class = pc_crystal
 		}
-		NOT = { is_planet_class = pc_crystal }
 	}
 
 	allow = {
@@ -1051,8 +1049,8 @@ building_acean_patch = {
 		NOR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
+			is_planet_class = pc_crystal
 		}
-		NOT = { is_planet_class = pc_crystal }
 	}
 
 	allow = {

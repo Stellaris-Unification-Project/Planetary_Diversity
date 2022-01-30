@@ -26,12 +26,10 @@ decision_prospect = {
 		NOR = {
 			is_planet_class = pc_machine
 			is_planet_class = pc_hive
-		}
-		NOR = {
 			is_planet_class = pc_pdhive1
 			is_planet_class = pc_pdhive2
+			is_planet_class = pc_city
 		}
-		NOT = { is_planet_class = pc_city }
 		owner = {
 			has_active_tradition = tr_adaptability_finish
 		}

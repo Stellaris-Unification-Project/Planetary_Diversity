@@ -26,12 +26,8 @@ decision_orbital_mirrors = {
 		NOR = {
 			has_modifier = resort_colony
 			is_planet_class = pc_city
-		}
-		NOR = {
 			is_planet_class = pc_crucible
 			has_deposit = d_pd_orbital_mirrors
-		}
-		NOR = {
 			has_deposit = d_snowball_wasteland_1
 			is_planet_class = pc_relic
 		}
@@ -71,12 +67,8 @@ decision_seismic_resonators = {
 		NOR = {
 			has_modifier = resort_colony
 			is_planet_class = pc_city
-		}
-		NOR = {
 			is_planet_class = pc_crucible
 			has_deposit = d_pd_seismic_resonators
-		}
-		NOR = {
 			has_deposit = d_snowball_wasteland_1
 			is_planet_class = pc_relic
 		}
@@ -115,12 +107,8 @@ decision_bionanite_soil = {
 		NOR = {
 			has_modifier = resort_colony
 			is_planet_class = pc_city
-		}
-		NOR = {
 			is_planet_class = pc_crucible
 			has_deposit = d_pd_bionanite_soil
-		}
-		NOR = {
 			has_deposit = d_snowball_wasteland_1
 			is_planet_class = pc_relic
 		}

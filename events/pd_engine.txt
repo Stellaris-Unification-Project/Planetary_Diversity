@@ -2179,28 +2179,16 @@ planet_event = {
 				NOR = {
 					has_planet_flag = special_start_planet
 					is_planet_class = pc_continental
-				}
-				NOR = {
 					is_planet_class = pc_tropical
 					is_planet_class = pc_tundra
-				}
-				NOR = {
 					is_planet_class = pc_arctic
 					is_planet_class = pc_arid
-				}
-				NOR = {
 					is_planet_class = pc_desert
 					is_planet_class = pc_ocean
-				}
-				NOR = {
 					is_planet_class = pc_alpine
 					is_planet_class = pc_savannah
-				}
-				NOR = {
 					is_planet_class = pc_gaia
 					is_planet_class = pc_relic
-				}
-				NOR = {
 					is_planet_class = pc_milarc_relic
 					is_planet_class = pc_archive
 				}
@@ -3042,8 +3030,8 @@ planet_event = {
 				NOR = {
 					has_planet_flag = pd_tol1
 					has_planet_flag = pd_tol2
+					has_planet_flag = pd_tol3
 				}
-				NOT = { has_planet_flag = pd_tol3 }
 				is_artificial = no
 				NOT = { is_planet_class = pc_ecocity }
 				NOT = { is_planet_class = pc_corpoarc }

@@ -31,24 +31,16 @@ decision_engineered_environment = {
 		NOR = {
 			is_planet_class = pc_pdshroud
 			is_planet_class = pc_gaia
-		}
-		NOR = {
 			is_planet_class = pc_relic
 			is_planet_class = pc_milarc_relic
-		}
-		NOR = {
 			is_planet_class = pc_hive
 			is_planet_class = pc_pdhive1
-		}
-		NOR = {
 			is_planet_class = pc_pdhive2
 			is_planet_class = pc_machine
-		}
-		NOR = {
 			is_planet_class = pc_hive
 			has_modifier = engineered_environment
+			has_modifier = engineered_environment_gaia
 		}
-		NOT = { has_modifier = engineered_environment_gaia }
 	}
 
 	effect = {
@@ -162,84 +154,46 @@ decision_engineered_environment_gaia = {
 		NOR = {
 			is_planet_class = pc_pdshroud
 			is_planet_class = pc_gaia
-		}
-		NOR = {
 			is_planet_class = pc_city
 			is_planet_class = pc_ecocity
-		}
-		NOR = {
 			is_planet_class = pc_corpoarc
 			is_planet_class = pc_palacearc
-		}
-		NOR = {
 			is_planet_class = pc_capitalarc
 			is_planet_class = pc_necropolis
-		}
-		NOR = {
 			is_planet_class = pc_machine_necropolis
 			is_planet_class = pc_necrohive
-		}
-		NOR = {
 			is_planet_class = pc_relic
 			is_planet_class = pc_milarc_relic
-		}
-		NOR = {
 			is_planet_class = pc_crystal
 			is_planet_class = pc_graveyard
-		}
-		NOR = {
 			is_planet_class = pc_floating
 			is_planet_class = pc_archive
-		}
-		NOR = {
 			is_planet_class = pc_technoorganic
 			is_planet_class = pc_pd_gas_giant_hab
-		}
-		NOR = {
 			is_planet_class = pc_pd_barren_hab
 			is_planet_class = pc_pd_barren_cold_hab
-		}
-		NOR = {
 			is_planet_class = pc_pd_frozen_hab
 			is_planet_class = pc_pd_molten_hab
-		}
-		NOR = {
 			is_planet_class = pc_pd_toxic_hab
 			is_planet_class = pc_pd_hothouse_hab
-		}
-		NOR = {
 			is_planet_class = pc_pd_asteroid_hab
 			is_planet_class = pc_hive
-		}
-		NOR = {
 			is_planet_class = pc_pdhive1
 			is_planet_class = pc_pdhive2
-		}
-		NOR = {
 			is_planet_class = pc_bioforge
 			is_planet_class = pc_biocapital
-		}
-		NOR = {
 			is_planet_class = pc_megafloraforge
 			is_planet_class = pc_megafloracapital
 		}
 		NOR = {
 			is_planet_class = pc_milarc
 			is_planet_class = pc_biofort
-		}
-		NOR = {
 			is_planet_class = pc_megaflorafort
 			is_planet_class = pc_machine_fort
-		}
-		NOR = {
 			is_planet_class = pc_shroudcity
 			is_planet_class = pc_shroudecocity
-		}
-		NOR = {
 			is_planet_class = pc_shroudcapitalarc
 			is_planet_class = pc_shroudpalacearc
-		}
-		NOR = {
 			is_planet_class = pc_shroudmilarc
 			is_planet_class = pc_shroudcorpoarc
 		}
@@ -527,52 +481,28 @@ decision_techno_canal = {
 		NOR = {
 			has_planet_flag = pdtechnocanal
 			is_planet_class = pc_city
-		}
-		NOR = {
 			is_planet_class = pc_ecocity
 			is_planet_class = pc_corpoarc
-		}
-		NOR = {
 			is_planet_class = pc_palacearc
 			is_planet_class = pc_capitalarc
-		}
-		NOR = {
 			is_planet_class = pc_necropolis
 			is_planet_class = pc_machine_necropolis
-		}
-		NOR = {
 			is_planet_class = pc_necrohive
 			is_planet_class = pc_milarc
-		}
-		NOR = {
 			is_planet_class = pc_shroudcity
 			is_planet_class = pc_shroudecocity
-		}
-		NOR = {
 			is_planet_class = pc_shroudcapitalarc
 			is_planet_class = pc_shroudpalacearc
-		}
-		NOR = {
 			is_planet_class = pc_shroudmilarc
 			is_planet_class = pc_shroudcorpoarc
-		}
-		NOR = {
 			is_planet_class = pc_hive
 			is_planet_class = pc_bioforge
-		}
-		NOR = {
 			is_planet_class = pc_biocapital
 			is_planet_class = pc_machine
-		}
-		NOR = {
 			is_planet_class = pc_machine_factory
 			is_planet_class = pc_machine_capital
-		}
-		NOR = {
 			is_planet_class = pc_machine_fort
 			has_modifier = resort_colony
-		}
-		NOR = {
 			has_modifier = penal_colony
 			has_modifier = slave_colony
 		}
@@ -650,8 +580,8 @@ decision_pd_transplant_tree = {
 				NOR = {
 					has_planet_flag = pd_tol1
 					has_planet_flag = pd_tol2
+					has_planet_flag = pd_tol3
 				}
-				NOT = { has_planet_flag = pd_tol3 }
 				is_artificial = no
 				NOT = { is_planet_class = pc_ecocity }
 				NOT = { is_planet_class = pc_corpoarc }

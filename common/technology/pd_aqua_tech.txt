@@ -105,44 +105,24 @@ tech_aquatic_world_adaption_non_wet = {
 		NOR = {
 			has_trait = trait_pc_aquatic_preference
 			has_trait = trait_pc_continental_preference
-		}
-		NOR = {
 			has_trait = trait_pc_lake_preference
 			has_trait = trait_pc_forest_preference
-		}
-		NOR = {
 			has_trait = trait_pc_tepid_preference
 			has_trait = trait_pc_retinal_preference
-		}
-		NOR = {
 			has_trait = trait_pc_superhabitable_preference
 			has_trait = trait_pc_megaflora_preference
-		}
-		NOR = {
 			has_trait = trait_pc_tropical_preference
 			has_trait = trait_pc_hajungle_preference
-		}
-		NOR = {
 			has_trait = trait_pc_cenote_preference
 			has_trait = trait_pc_mangrove_preference
-		}
-		NOR = {
 			has_trait = trait_pc_desertislands_preference
 			has_trait = trait_pc_biolumen_preference
-		}
-		NOR = {
 			has_trait = trait_pc_geothermal_preference
 			has_trait = trait_pc_ocean_preference
-		}
-		NOR = {
 			has_trait = trait_pc_cascadian_preference
 			has_trait = trait_pc_wetswamp_preference
-		}
-		NOR = {
 			has_trait = trait_pc_fog_preference
 			has_trait = trait_pc_subarctic_preference
-		}
-		NOR = {
 			has_trait = trait_pc_karst_preference
 			has_trait = trait_pc_reef_preference
 		}
