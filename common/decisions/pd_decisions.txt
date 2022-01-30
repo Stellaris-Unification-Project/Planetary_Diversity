@@ -184,8 +184,6 @@ decision_engineered_environment_gaia = {
 			is_planet_class = pc_biocapital
 			is_planet_class = pc_megafloraforge
 			is_planet_class = pc_megafloracapital
-		}
-		NOR = {
 			is_planet_class = pc_milarc
 			is_planet_class = pc_biofort
 			is_planet_class = pc_megaflorafort
